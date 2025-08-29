@@ -6,81 +6,100 @@
   <title>Idei de cadouri pentru ziua lui Denis</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #f0f2f5, #dbeafe);
-      color: #333;
-      animation: fadeIn 1.5s ease-in;
+      background: #121212;
+      color: #e0e0e0;
+      scroll-behavior: smooth;
     }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
+
     header {
       position: relative;
       width: 100%;
-      height: 320px;
+      height: 350px;
       background: url('header.png') no-repeat center center/cover;
       display: flex;
       align-items: center;
       justify-content: center;
+      box-shadow: inset 0 0 0 1000px rgba(0,0,0,0.6);
     }
+
     header h1 {
-      color: white;
-      font-size: 3.2rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
-      animation: slideIn 1.5s ease-out;
+      color: #ffffff;
+      font-size: 3rem;
+      text-align: center;
+      text-shadow: 2px 2px 12px rgba(0,0,0,0.8);
+      animation: fadeIn 1.8s ease-out;
     }
-    @keyframes slideIn {
-      from {transform: translateY(-50px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
     }
+
     .gift-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
       max-width: 1200px;
-      margin: 40px auto;
+      margin: 50px auto;
       padding: 0 20px;
     }
+
     .gift {
-      background: #fff;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 6px 12px rgba(0,0,0,0.1);
-      transition: transform 0.2s, box-shadow 0.2s;
-      animation: fadeUp 1.2s ease;
+      background: #1e1e1e;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
     }
-    @keyframes fadeUp {
-      from {transform: translateY(40px); opacity: 0;}
-      to {transform: translateY(0); opacity: 1;}
-    }
+
     .gift:hover {
-      transform: scale(1.03);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.7);
     }
+
     .gift img {
-      max-width: 100%;
-      border-radius: 8px;
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s;
+      filter: brightness(0.9);
     }
+
+    .gift img:hover {
+      transform: scale(1.05);
+      filter: brightness(1);
+    }
+
+    .gift-content {
+      padding: 15px 20px;
+      text-align: center;
+    }
+
     .gift h2 {
-      margin: 15px 0 5px;
-      font-size: 1.3rem;
-      color: #222;
-      animation: fadeIn 1.5s ease-in;
+      font-size: 1.4rem;
+      margin: 10px 0;
+      color: #e0e0e0;
+      transition: color 0.3s;
     }
+
+    .gift h2:hover {
+      color: #00bfff;
+    }
+
     .price {
       font-weight: bold;
       font-size: 1.1rem;
-      color: #0077cc;
-      margin-bottom: 5px;
+      color: #b0b0b0;
+      margin-bottom: 10px;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Cadouri pentru ziua lui Denis</h1>
+    <h1>Idei de cadouri pentru ziua lui Denis</h1>
   </header>
 
   <div class="gift-container">
@@ -88,48 +107,60 @@
       <a href="https://www.emag.ro/monitor-led-gaming-curbat-lg-32gs60qc-b-31-5-qhd-2560-x-1440-hdmi-displayport-180-hz-1-ms-negru-32gs60qc-b-aeuq/pd/DXL7Q5YBM/" target="_blank">
         <img src="monitor.png" alt="Monitor Gaming LG">
       </a>
-      <h2>Monitor Gaming LG 32" Curbat</h2>
-      <div class="price">~1.899 RON</div>
+      <div class="gift-content">
+        <h2>Monitor Gaming LG 32" Curbat</h2>
+        <div class="price">~1.899 RON</div>
+      </div>
     </div>
 
     <div class="gift">
       <a href="https://www.autovit.ro/autoturisme/anunt/audi-a6-ID7Hy7fV.html" target="_blank">
         <img src="audi.png" alt="Audi A6">
       </a>
-      <h2>Audi A6</h2>
-      <div class="price">~70.000 RON</div>
+      <div class="gift-content">
+        <h2>Audi A6</h2>
+        <div class="price">~70.000 RON</div>
+      </div>
     </div>
 
     <div class="gift">
       <a href="https://www.emag.ro/placa-video-asus-tuf-gaming-geforce-rtxtm-5090-oc-edition-32gb-gddr7-512-bit-tuf-rtx5090-o32g-gaming/pd/DRX18GYBM/" target="_blank">
         <img src="rtx5090.png" alt="Placa Video RTX 5090">
       </a>
-      <h2>Placă Video ASUS RTX 5090</h2>
-      <div class="price">~12.499 RON</div>
+      <div class="gift-content">
+        <h2>Placă Video ASUS RTX 5090</h2>
+        <div class="price">~12.499 RON</div>
+      </div>
     </div>
 
     <div class="gift">
       <a href="https://www.emag.ro/telefon-mobil-apple-iphone-16-pro-max-256gb-5g-black-titanium-mywv3zd-a/pd/D6367LYBM/" target="_blank">
         <img src="iphone.png" alt="iPhone 16 Pro Max">
       </a>
-      <h2>Apple iPhone 16 Pro Max</h2>
-      <div class="price">~6.799 RON</div>
+      <div class="gift-content">
+        <h2>Apple iPhone 16 Pro Max</h2>
+        <div class="price">~6.799 RON</div>
+      </div>
     </div>
 
     <div class="gift">
       <a href="https://www.emag.ro/telefon-mobil-samsung-galaxy-s25-ultra-dual-sim-12gb-ram-512gb-5g-titanium-gray-sm-s938bztgeue/pd/DTRVXGYBM/" target="_blank">
         <img src="samsung.png" alt="Samsung Galaxy S25 Ultra">
       </a>
-      <h2>Samsung Galaxy S25 Ultra</h2>
-      <div class="price">~6.499 RON</div>
+      <div class="gift-content">
+        <h2>Samsung Galaxy S25 Ultra</h2>
+        <div class="price">~6.499 RON</div>
+      </div>
     </div>
 
     <div class="gift">
       <a href="https://aktis.estate/ro/realty/islands-1621" target="_blank">
         <img src="insula.png" alt="Insulă privată">
       </a>
-      <h2>Insulă Privată Exotică</h2>
-      <div class="price">~12.000.000 RON</div>
+      <div class="gift-content">
+        <h2>Insulă Privată Exotică</h2>
+        <div class="price">~12.000.000 RON</div>
+      </div>
     </div>
   </div>
 </body>
